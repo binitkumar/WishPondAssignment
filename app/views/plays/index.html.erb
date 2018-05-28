@@ -1,0 +1,31 @@
+<script>
+  var image_collection = <%= @image_collection.html_safe%>
+</script>
+<h1 id="coundown-timer"></h1>
+
+<img src="" id="image_section" style="width:100px;height: 100px;"/>
+
+<br/>
+<br/>
+<br/>
+
+<button onClick="captureData()"> Play </button>
+<br/>
+<br/>
+
+<table>
+  <thead>
+    <tr>
+      <td>Number</td>
+      <td>Image</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @plays.each do |play|%>
+      <tr>
+        <td><%= play.number%></td>
+        <td><img src="<%= play.image_url%>" style="width: 200px;height: 200px;" /></td>
+      </tr>
+    <%end%>  
+  </tbody>
+</table>
