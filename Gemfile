@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 ruby '2.3.3'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -25,7 +25,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'mysql2', '~> 0.3.18'
+gem 'sqlite3'
 gem 'thin'
 group :development do
   gem 'better_errors'
@@ -38,3 +38,4 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rubocop'
 end
+gem "aws-sdk-s3", require: false
