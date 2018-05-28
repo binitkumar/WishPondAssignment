@@ -12,10 +12,13 @@ function getCSRFToken() {
 } 
 
 function incrementSeconds(){
+  if( number_counter == 9){
+    number_counter = -1;
+    image_counter = -1;
+  }
   number_counter += 1
   image_counter += 1
 
-  number_counter = number_counter % 10;
   image_counter = image_counter % image_collection.length;
 
   document.getElementById("coundown-timer").innerHTML = 10 - number_counter;
